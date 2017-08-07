@@ -1,0 +1,36 @@
+.section{
+  padding: 0 1rem;
+}
+
+p{
+  margin-bottom: 1rem;
+}
+
+.notification.is-light{
+  margin-bottom: 1rem;
+}
+
+.notification p{
+  margin-bottom: 0.25rem;
+}
+
+.zoo-subnav{
+  margin: 1rem 0;
+}
+
+ul.tiny-empty-zoo li.tiny-empty-zoo a,
+ul.tiny-stuffed-animal-zoo li.tiny-stuffed-animal-zoo a{
+  color: hsl(48, 100%, 67%);
+}
+
+ul.product-collection-index li.product-collection-index a,
+ul.product-collection-categories li.product-collection-categories a,
+ul.product-collection-category li.product-collection-category a{
+  color: hsl(141, 71%, 48%);
+}
+
+ul.collection-index li.collection-index a,
+ul.collection-categories li.collection-categories a,
+ul.collection-category li.collection-category a{
+  color: hsl(171, 100%, 41%);
+}

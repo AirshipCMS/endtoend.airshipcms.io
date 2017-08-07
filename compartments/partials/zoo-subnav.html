@@ -1,0 +1,161 @@
+<!-- PARTIAL USED within TEMPLATES.-->
+
+<!-- Content blocks won't work here. If you want to use content blocks, this partial needs to be inserted into a layout. -->
+
+<!-- logic on this partial is really gross, though it utilizes the same partial for a subnav accross all templates in the collection. refactor when categories.html and show.html are standardized -->
+
+<section class="hero is-small 
+  {{#if collection}}
+    {{#if collection.has_products}}
+      is-success
+    {{else}}
+      is-primary
+    {{/if}}
+  {{else}}
+    {{#if primary_label}}
+      {{#if has_products}}
+        is-success
+      {{else}}
+        is-primary
+      {{/if}}
+    {{else}}
+      {{#if aerostat_collection_id}}
+        {{#if aerostat_collection.has_products}}
+          is-success
+        {{else}}
+          is-primary
+        {{/if}}
+      {{else}}
+        is-warning
+      {{/if}}
+    {{/if}}
+  {{/if}}
+">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle">Zoo Experiments</h2>
+      <h1 class="title">
+        {{#if collection}}
+          {{collection.title}}
+          {{#if category}}
+            &rsaquo; {{category.title}} Category
+          {{/if}}
+        {{/if}}
+
+        {{#if primary_label}}
+          {{title}} &rsaquo; Categories
+        {{else}}
+          {{#if aerostat_collection_id}}
+            {{aerostat_collection.title}} &rsaquo; &ldquo;{{permalink}}&ldquo;
+          {{else}}
+            {{name}}
+          {{/if}}
+        {{/if}}
+      </h1>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <nav class="zoo-subnav breadcrumb has-dot-separator is-small" aria-label="breadcrumbs">
+      <ul class="
+
+{{#if collection}}
+  {{#if collection.has_products}}
+    {{#if category}}
+      product-collection-category
+    {{else}}
+      product-collection-index
+    {{/if}}
+  {{else}}
+    {{#if category}}
+      collection-category
+    {{else}}
+      collection-index
+    {{/if}}
+  {{/if}}
+{{else}}
+  {{#if primary_label}}
+    {{#if has_products}}
+      product-collection-categories
+    {{else}}
+      collection-categories
+    {{/if}}
+  {{else}}
+    {{#if aerostat_collection_id}}
+      {{#if aerostat_collection.has_products}}
+        product-collection-show
+      {{else}}
+        collection-show
+      {{/if}}
+    {{else}}
+      {{permalink}}
+    {{/if}}
+  {{/if}}
+{{/if}}
+
+      ">
+        <li class="tiny-stuffed-animal-zoo"><a href="/tiny-stuffed-animal-zoo">Zoo</a></li>
+        <li class="tiny-empty-zoo"><a href="/tiny-empty-zoo">Empty Zoo</a></li>
+        <li class="product-collection-index"><a href="/stuffed-animals">Product Collection</a></li>
+        <li class="product-collection-categories"><a href="/stuffed-animals/categories">Product Collection Cats</a></li>
+        <li class="product-collection-category"><a href="/stuffed-animals/categories/ocean">Product Collection Cat</a></li>
+        <li class="collection-index"><a href="/unstuffed-animals">Collection</a></li>
+        <li class="collection-categories"><a href="/unstuffed-animals/categories">Collection Cats</a></li>
+        <li class="collection-category"><a href="/unstuffed-animals/categories/cat1">Collection Cat</a></li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="notification is-light">
+      <p>Properties of this View:</p>
+      {{#if collection}}
+        {{#if collection.has_products}}
+          <span class="tag is-success">Product Collection</span>
+          {{#if items}}
+            <span class="tag is-success">Has Items</span>
+          {{/if}}
+          {{#if category}}
+            <span class="tag is-success">Category</span>
+          {{/if}}
+
+        {{else}}
+          <span class="tag is-primary">Collection</span>
+          {{#if items}}
+            <span class="tag is-primary">Has Items</span>
+          {{/if}}
+          {{#if category}}
+            <span class="tag is-primary">Category</span>
+          {{/if}}
+        {{/if}}
+      {{else}}
+        <!-- yuck logic. fix when categories template is fixed -->
+        {{#if primary_label}}
+          {{#if has_products}}
+            <span class="tag is-success">Product Collection</span>
+            <span class="tag is-success">Categories</span>
+          {{else}}
+            <span class="tag is-primary">Collection</span>
+            <span class="tag is-primary">Categories</span>
+          {{/if}}
+        <!-- end fix this logic -->
+        {{else}}
+          {{#if aerostat_collection_id}}
+            {{#if aerostat_collection.has_products}}
+              <span class="tag is-success">Product Collection</span>
+              <span class="tag is-success">Product</span>
+            {{else}}
+              <span class="tag is-primary">Collection</span>
+              <span class="tag is-primary">Post</span>
+            {{/if}}
+          {{else}}
+            <span class="tag is-warning">Page</span>
+          {{/if}}
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+</section>
