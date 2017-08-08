@@ -15,28 +15,28 @@
     <div class="field">
       <label for="text_1" class="label">Text 1*</label>
       <div class="control">
-        <input id="text_1" type="text" class="input required" placeholder="Text 1 Placeholder" required>
+        <input name="text_1" id="text_1" type="text" class="input required" placeholder="Text 1 Placeholder" required>
       </div>
     </div>
 
     <div class="field">
       <label for="text_2" class="label">Text 2</label>
       <div class="control">
-        <input id="text_2" type="text" class="input" placeholder="Text 2 Placeholder">
+        <input name="text_2" id="text_2" type="text" class="input" placeholder="Text 2 Placeholder">
       </div>
     </div>
 
     <div class="field">
       <label for="textarea_1" class="label">Textarea 1</label>
       <div class="control">
-        <textarea id="textarea_1" class="textarea" placeholder="Textarea 1 Placeholder"></textarea>
+        <textarea name="textarea_1" id="textarea_1" class="textarea" placeholder="Textarea 1 Placeholder"></textarea>
       </div>
     </div>
 
     <div class="field">
       <label for="textarea_2" class="label">Textarea 2</label>
       <div class="control">
-        <textarea id="textarea_2" class="textarea" placeholder="Textarea 2 Placeholder"></textarea>
+        <textarea name="textarea_2" id="textarea_2" class="textarea" placeholder="Textarea 2 Placeholder"></textarea>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
       <p>This displays as a Select Form Element, though for simplicity the data is saved as Text.</p>
       <div class="control">
         <div class="select">
-          <select id="select_to_text" required class="required">
+          <select name="select_to_text" id="select_to_text" required class="required">
             <option value="">Select</option>
             <option>Any Arbitrary Option 1</option>
             <option>Any Arbitrary Option 2</option>
@@ -62,7 +62,7 @@
       <p>This displays as another Select Form Element, though for simplicity the data is saved as Text.</p>
       <div class="control">
         <div class="select">
-          <select id="select_to_text_2">
+          <select id="select_to_text_2" name="select_to_text_2">
             <option value="">Select</option>
             <option>Another Arbitrary Option 1</option>
             <option>Another Arbitrary Option 2</option>
@@ -79,7 +79,7 @@
       <p>This displays as a Select Form Element, and saves the data as a select option. The select options must match the spelling, spacing, as it is set up in the collection.</p>
       <div class="control">
         <div class="select">
-          <select id="select_to_select">
+          <select id="select_to_select" name="select_to_select">
             <option value="">Select</option>
             <option>Select 1</option>
             <option>Select 2</option>
@@ -94,7 +94,7 @@
       <p>This displays as another Select Form Element, and saves the data as a select option. The select options must match the spelling, spacing, as it is set up in the collection.</p>
       <div class="control">
         <div class="select">
-          <select id="select_to_select_2">
+          <select id="select_to_select_2" name="select_to_select_2">
             <option value="">Select</option>
             <option>Select 1</option>
             <option>Select 2</option>
@@ -124,11 +124,11 @@
       <p>This displays as another set of Radio Button Options, though for simplicity the data is saved as Text.</p>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="radio_to_text_2" value="Yes">
+          <input type="radio" name="radio_to_text_2" value="Agree">
           Agree
         </label>
         <label class="radio">
-          <input type="radio" name="radio_to_text_2" value="No">
+          <input type="radio" name="radio_to_text_2" value="Disagree">
           Disagree
         </label>
       </div>
@@ -139,15 +139,15 @@
       <p>This displays as Radio Button Options, and saves the data as a radio options. The radio options must match the spelling, spacing, as it is set up in the collection.</p>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="radio_to_radio" value="Yes">
+          <input type="radio" name="radio_to_radio" value="Radio 1">
           Radio 1
         </label>
         <label class="radio">
-          <input type="radio" name="radio_to_radio" value="No">
+          <input type="radio" name="radio_to_radio" value="Radio 2">
           Radio 2
         </label>
         <label class="radio">
-          <input type="radio" name="radio_to_radio" value="No">
+          <input type="radio" name="radio_to_radio" value="Radio 3">
           Radio 3
         </label>
       </div>
@@ -158,15 +158,15 @@
       <p>This displays as another set of Radio Button Options, and saves the data as a radio options. The radio options must match the spelling, spacing, as it is set up in the collection.</p>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="Yes">
+          <input type="radio" name="radio_to_radio_2" value="Radio 1">
           Radio 1
         </label>
         <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="No">
+          <input type="radio" name="radio_to_radio_2" value="Radio 2">
           Radio 2
         </label>
         <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="No">
+          <input type="radio" name="radio_to_radio_2" value="Radio 3">
           Radio 3
         </label>
       </div>
@@ -192,7 +192,7 @@
       <label class="label">Checkbox</label>
       <div class="control">
         <label class="checkbox">
-          <input id="checkbox" type="checkbox">
+          <input id="checkbox" type="checkbox" name="checkbox">
           Checkbox
         </label>
       </div>
@@ -202,13 +202,14 @@
       <label class="label">Checkbox 2</label>
       <div class="control">
         <label class="checkbox">
-          <input id="checkbox_2" type="checkbox">
+          <input id="checkbox_2" type="checkbox" name="checkbox">
           Checkbox 2
         </label>
       </div>
     </div>
 
     <p id="form-error" class="hidden">Please fill in required fields.</p>
+    <p id="submission-message" class="hidden">Thank you for your submission.</p>
 
     <div class="field">
       <div class="control">
