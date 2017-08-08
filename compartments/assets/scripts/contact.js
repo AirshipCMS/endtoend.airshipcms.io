@@ -45,7 +45,6 @@ function validateForm() {
       $("#form-error").addClass("hidden");
     }
   } else {
-    submit(); //REMOVE THIS
     if ($("#form-error").hasClass("hidden")) {
       $("#form-error").removeClass("hidden");
     }
@@ -93,7 +92,7 @@ function submit() {
     },
     data: JSON.stringify(payload),
     success: function() {
-      // $('input,select,textarea').reset();
+      $('form')[0].reset();
       $('#submission-message').toggleClass("hidden");
       setTimeout(function() {
         $('#submission-message').toggleClass("hidden");
