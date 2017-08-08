@@ -15,7 +15,7 @@
     <div class="field">
       <label for="text_1" class="label">Text 1*</label>
       <div class="control">
-        <input id="text_1" type="text" class="input" placeholder="Text 1 Placeholder">
+        <input id="text_1" type="text" class="input required" placeholder="Text 1 Placeholder" required>
       </div>
     </div>
 
@@ -45,7 +45,8 @@
       <p>This displays as a Select Form Element, though for simplicity the data is saved as Text.</p>
       <div class="control">
         <div class="select">
-          <select id="select_to_text">
+          <select id="select_to_text" required class="required">
+            <option value="">Select</option>
             <option>Any Arbitrary Option 1</option>
             <option>Any Arbitrary Option 2</option>
             <option>Any Arbitrary Option 3</option>
@@ -62,6 +63,7 @@
       <div class="control">
         <div class="select">
           <select id="select_to_text_2">
+            <option value="">Select</option>
             <option>Another Arbitrary Option 1</option>
             <option>Another Arbitrary Option 2</option>
             <option>Another Arbitrary Option 3</option>
@@ -78,6 +80,7 @@
       <div class="control">
         <div class="select">
           <select id="select_to_select">
+            <option value="">Select</option>
             <option>Select 1</option>
             <option>Select 2</option>
             <option>Select 3</option>
@@ -92,6 +95,7 @@
       <div class="control">
         <div class="select">
           <select id="select_to_select_2">
+            <option value="">Select</option>
             <option>Select 1</option>
             <option>Select 2</option>
             <option>Select 3</option>
@@ -105,7 +109,7 @@
       <p>This displays as Radio Button Options, though for simplicity the data is saved as Text.</p>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="radio_to_text" value="Yes">
+          <input type="radio" name="radio_to_text" value="Yes" required class="required">
           Yes
         </label>
         <label class="radio">
@@ -206,10 +210,12 @@
 
     <div class="field">
       <div class="control">
-        <button class="button is-primary">Submit</button>
+        <button class="button is-primary" onclick="validateForm()">Submit</button>
       </div>
     </div>
 
 
   </div>
 </section>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/assets/scripts/contact.js"></script>
