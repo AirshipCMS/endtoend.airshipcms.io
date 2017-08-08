@@ -10,6 +10,7 @@ function getCollection() {
       collection = data;
     }
   });
+
   return collection;
 }
 getCollection();
@@ -59,14 +60,19 @@ function submit() {
   };
 
   payload.fields = collection.fields.map(function(collectionField) {
-    $('input,select,textarea').each(function(i, field) {
+    $("input,select,textarea").each(function(i, field) {
       field = $(field)[0];
-      if(collectionField.variable_name === field.name) {
-        switch(field.tagName) {
-          case 'INPUT':
-            if((field.type === 'radio' || field.type === 'checkbox') && $("input[name='" + $(field)[0].name + "']:checked")[0]) {
-              if(field.type === 'radio') {
-                collectionField.value = $("input[name='" + $(field)[0].name + "']:checked")[0].value;
+      if (collectionField.variable_name === field.name) {
+        switch (field.tagName) {
+          case "INPUT":
+            if (
+              (field.type === "radio" || field.type === "checkbox") &&
+              $("input[name='" + $(field)[0].name + "']:checked")[0]
+            ) {
+              if (field.type === "radio") {
+                collectionField.value = $(
+                  "input[name='" + $(field)[0].name + "']:checked"
+                )[0].value;
               } else {
                 collectionField.value = true;
               }
@@ -85,18 +91,18 @@ function submit() {
 
   // POST /api/aerostats
   $.ajax({
-    url: 'https://endtoend.airshipcms.io/api/aerostats',
-    method: 'POST',
+    url: "https://endtoend.airshipcms.io/api/aerostats",
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     },
     data: JSON.stringify(payload),
     success: function() {
-      $('form')[0].reset();
-      $('#submission-message').toggleClass("hidden");
+      $("form")[0].reset();
+      $("#submission-message").toggleClass("hidden");
       setTimeout(function() {
-        $('#submission-message').toggleClass("hidden");
-      },3000);
+        $("#submission-message").toggleClass("hidden");
+      }, 3000);
     }
   });
 }
