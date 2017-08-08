@@ -1,4 +1,4 @@
-<section class="hero is-small is-warning">
+<section class="hero is-small is-primary">
   <div class="hero-body">
     <div class="container">
       <h2 class="subtitle">Forms</h2>
@@ -9,216 +9,326 @@
   </div>
 </section>
 
-<section class="section">
-
-  <form class="container">
-    <div class="field">
-      <label for="text_1" class="label">Text 1*</label>
-      <div class="control">
-        <input name="text_1" id="text_1" type="text" class="input required" placeholder="Text 1 Placeholder" required>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="text_2" class="label">Text 2</label>
-      <div class="control">
-        <input name="text_2" id="text_2" type="text" class="input" placeholder="Text 2 Placeholder">
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="textarea_1" class="label">Textarea 1</label>
-      <div class="control">
-        <textarea name="textarea_1" id="textarea_1" class="textarea" placeholder="Textarea 1 Placeholder"></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="textarea_2" class="label">Textarea 2</label>
-      <div class="control">
-        <textarea name="textarea_2" id="textarea_2" class="textarea" placeholder="Textarea 2 Placeholder"></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="select_to_text" class="label">Select to Text*</label>
-      <p>This displays as a Select Form Element, though for simplicity the data is saved as Text.</p>
-      <div class="control">
-        <div class="select">
-          <select name="select_to_text" id="select_to_text" required class="required">
-            <option value="">Select</option>
-            <option>Any Arbitrary Option 1</option>
-            <option>Any Arbitrary Option 2</option>
-            <option>Any Arbitrary Option 3</option>
-            <option>Any Arbitrary Option 4</option>
-            <option>Any Arbitrary Option 5</option>
-          </select>
+<section class="section body-section">
+  <div class="container">
+    <form>
+      <div class="columns">
+        <div class="column">
+          <div class="notification is-primary">
+            <p>It is easiest to save <b>Text</b> and <b>Textarea</b> type fields in Airship.</p>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="field">
-      <label for="select_to_text_2" class="label">Select to Text 2</label>
-      <p>This displays as another Select Form Element, though for simplicity the data is saved as Text.</p>
-      <div class="control">
-        <div class="select">
-          <select id="select_to_text_2" name="select_to_text_2">
-            <option value="">Select</option>
-            <option>Another Arbitrary Option 1</option>
-            <option>Another Arbitrary Option 2</option>
-            <option>Another Arbitrary Option 3</option>
-            <option>Another Arbitrary Option 4</option>
-            <option>Another Arbitrary Option 5</option>
-          </select>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="text_1" class="label">Text 1*</label>
+            <div class="control">
+              <input name="text_1" id="text_1" type="text" class="input required" placeholder="Text 1 Placeholder" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="text_2" class="label">Text 2</label>
+            <div class="control">
+              <input name="text_2" id="text_2" type="text" class="input" placeholder="Text 2 Placeholder">
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>Example of Text Fields that save as Text Fields in Airship.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="select_to_select" class="label">Select to Select</label>
-      <p>This displays as a Select Form Element, and saves the data as a select option. The select options must match the spelling, spacing, as it is set up in the collection.</p>
-      <div class="control">
-        <div class="select">
-          <select id="select_to_select" name="select_to_select">
-            <option value="">Select</option>
-            <option>Select 1</option>
-            <option>Select 2</option>
-            <option>Select 3</option>
-          </select>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="textarea_1" class="label">Textarea 1</label>
+            <div class="control">
+              <textarea name="textarea_1" id="textarea_1" class="textarea" placeholder="Textarea 1 Placeholder"></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <label for="textarea_2" class="label">Textarea 2</label>
+            <div class="control">
+              <textarea name="textarea_2" id="textarea_2" class="textarea" placeholder="Textarea 2 Placeholder"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>Example of Textarea Fields that save as Textarea Fields in Airship.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="select_to_select_2" class="label">Select to Select 2</label>
-      <p>This displays as another Select Form Element, and saves the data as a select option. The select options must match the spelling, spacing, as it is set up in the collection.</p>
-      <div class="control">
-        <div class="select">
-          <select id="select_to_select_2" name="select_to_select_2">
-            <option value="">Select</option>
-            <option>Select 1</option>
-            <option>Select 2</option>
-            <option>Select 3</option>
-          </select>
+      <div class="columns">
+        <div class="column">
+          <div class="notification is-primary">
+            <p>It is also fairly easy to have Select and Radio fields on the frontend of your form, though it is easier to save the output data as <b>Text</b> or <b>Textarea</b> fields.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="" class="label">Radio to Text*</label>
-      <p>This displays as Radio Button Options, though for simplicity the data is saved as Text.</p>
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="radio_to_text" value="Yes" required class="required">
-          Yes
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_text" value="No">
-          No
-        </label>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="select_to_text" class="label">Select to Text*</label>
+            <div class="control">
+              <div class="select">
+                <select name="select_to_text" id="select_to_text" required class="required">
+                  <option value="">Select</option>
+                  <option>Any Arbitrary Option 1</option>
+                  <option>Any Arbitrary Option 2</option>
+                  <option>Any Arbitrary Option 3</option>
+                  <option>Any Arbitrary Option 4</option>
+                  <option>Any Arbitrary Option 5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="select_to_text_2" class="label">Select to Text 2</label>
+            <div class="control">
+              <div class="select">
+                <select id="select_to_text_2" name="select_to_text_2">
+                  <option value="">Select</option>
+                  <option>Another Arbitrary Option 1</option>
+                  <option>Another Arbitrary Option 2</option>
+                  <option>Another Arbitrary Option 3</option>
+                  <option>Another Arbitrary Option 4</option>
+                  <option>Another Arbitrary Option 5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>This displays as a Select Form Element, though for simplicity the data is saved as Text in Airship.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="" class="label">Radio to Text 2 </label>
-      <p>This displays as another set of Radio Button Options, though for simplicity the data is saved as Text.</p>
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="radio_to_text_2" value="Agree">
-          Agree
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_text_2" value="Disagree">
-          Disagree
-        </label>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="" class="label">Radio to Text*</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="radio_to_text" value="Yes" required class="required">
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_text" value="No">
+                No
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="label">Radio to Text 2 </label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="radio_to_text_2" value="Agree">
+                Agree
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_text_2" value="Disagree">
+                Disagree
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>This displays as Radio Button Options, though for simplicity the data is saved as Text in Airship.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="" class="label">Radio to Radio</label>
-      <p>This displays as Radio Button Options, and saves the data as a radio options. The radio options must match the spelling, spacing, as it is set up in the collection.</p>
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="radio_to_radio" value="Radio 1">
-          Radio 1
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_radio" value="Radio 2">
-          Radio 2
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_radio" value="Radio 3">
-          Radio 3
-        </label>
+      <div class="columns">
+        <div class="column">
+          <div class="notification is-primary">
+            <p>You can save Select and Radio fields as Select and Radio options in the Airship post, although you need to make sure each option matches the options set in Airship. If the data does not have to be manipulated after it is submitted, it is easier to save Select and Radio form options to <b>Text</b> rather than <b>Select</b> and <b>Radio</b> fields.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="" class="label">Radio to Radio 2</label>
-      <p>This displays as another set of Radio Button Options, and saves the data as a radio options. The radio options must match the spelling, spacing, as it is set up in the collection.</p>
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="Radio 1">
-          Radio 1
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="Radio 2">
-          Radio 2
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio_to_radio_2" value="Radio 3">
-          Radio 3
-        </label>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="select_to_select" class="label">Select to Select</label>
+            <div class="control">
+              <div class="select">
+                <select id="select_to_select" name="select_to_select">
+                  <option value="">Select</option>
+                  <option>Select 1</option>
+                  <option>Select 2</option>
+                  <option>Select 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="select_to_select_2" class="label">Select to Select 2</label>
+            <div class="control">
+              <div class="select">
+                <select id="select_to_select_2" name="select_to_select_2">
+                  <option value="">Select</option>
+                  <option>Select 1</option>
+                  <option>Select 2</option>
+                  <option>Select 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>This displays as a Select Form Element, and saves the data as a select option. The select options must match the spelling, spacing, as it is set up in the collection.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- <div class="field">
-      <label for="datepicker_to_text" class="label">Datepicker to Text</label>
-      <p>This uses the [plugin] plugin to show a datepicker, and saves the date as text.</p>
-      <div class="control">
-        [ datepicker ]
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label for="" class="label">Radio to Radio</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="radio_to_radio" value="Radio 1">
+                Radio 1
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_radio" value="Radio 2">
+                Radio 2
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_radio" value="Radio 3">
+                Radio 3
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="label">Radio to Radio 2</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="radio_to_radio_2" value="Radio 1">
+                Radio 1
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_radio_2" value="Radio 2">
+                Radio 2
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio_to_radio_2" value="Radio 3">
+                Radio 3
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>This displays as Radio Button Options, and saves the data as a radio options. The radio options must match the spelling, spacing, as it is set up in the collection.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label for="datepicker_to_text" class="label">Datepicker to Text 2</label>
-      <p>This uses the [plugin] plugin to show a datepicker, and saves the date as text.</p>
-      <div class="control">
-        [ datepicker ]
+      <div class="columns">
+        <div class="column">
+          <div class="notification is-primary">
+            <p>You can also save checkbox data:</p>
+          </div>
+        </div>
       </div>
-    </div> -->
 
-    <div class="field">
-      <label class="label">Checkbox</label>
-      <div class="control">
-        <label class="checkbox">
-          <input id="checkbox" type="checkbox" name="checkbox">
-          Checkbox
-        </label>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label class="label">Checkbox</label>
+            <div class="control">
+              <label class="checkbox">
+                <input id="checkbox" type="checkbox" name="checkbox">
+                Checkbox
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Checkbox 2</label>
+            <div class="control">
+              <label class="checkbox">
+                <input id="checkbox_2" type="checkbox" name="checkbox_2">
+                Checkbox 2
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>Example of Checkboxes</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Checkbox 2</label>
-      <div class="control">
-        <label class="checkbox">
-          <input id="checkbox_2" type="checkbox" name="checkbox">
-          Checkbox 2
-        </label>
+      <div class="columns">
+        <div class="column">
+          <div class="notification is-primary">
+            <p>Although for more complex checkbox data, it might make more sense to have checkbox options on the frontend, though just save all the data to a <b>Text</b> field in Airship:</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <p id="form-error" class="hidden">Please fill in required fields.</p>
-    <p id="submission-message" class="hidden">Thank you for your submission.</p>
-
-    <div class="field">
-      <div class="control">
-        <button class="button is-primary" onclick="validateForm()" type="button">Submit</button>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="field">
+            <label class="label">Checkboxes Set</label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox_set">
+                Checkbox 1
+              </label>
+            </div>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox_set">
+                Checkbox 2
+              </label>
+            </div>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="checkbox_set">
+                Checkbox 3
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="notification">
+            <p>Example of a Set of Checkboxes</p>
+          </div>
+        </div>
       </div>
-    </div>
 
+      <div id="form-error" class="hidden">
+        <div class="notification is-danger">
+          <p>Please fill in required fields.</p>
+        </div>
+      </div>
 
-  </form>
+      <div id="submission-message" class="hidden">
+        <div class="notification is-success">
+          <p>Thank you for your submission.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button class="button is-primary" onclick="validateForm()" type="button">Submit</button>
+        </div>
+      </div>      
+    </form>
+  </div>
 </section>
-<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/assets/scripts/contact.js"></script>

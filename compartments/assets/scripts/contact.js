@@ -4,7 +4,7 @@ function getCollection() {
   // GET api/aerostat_collections/{id} to pull from desired collection
   // Contact Form Example's ID is 342
   $.ajax({
-    url: "https://endtoend.airshipcms.io/api/aerostat_collections/373",
+    url: "/api/aerostat_collections/373",
     method: "GET",
     success: function(data) {
       collection = data;
@@ -91,7 +91,7 @@ function submit() {
 
   // POST /api/aerostats
   $.ajax({
-    url: "https://endtoend.airshipcms.io/api/aerostats",
+    url: "/api/aerostats",
     method: "POST",
     headers: {
       "Content-Type": "application/json"

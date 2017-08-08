@@ -1,5 +1,9 @@
 .section{
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+
+.section.body-section{
+  padding: 3rem 1.5rem;
 }
 
 p{
@@ -37,4 +41,26 @@ ul.collection-category li.collection-category a{
 
 .hidden {
 	display: none;
+}
+
+form p{
+
+}
+
+form .field + .field{
+  margin-top: 1.5rem;
+}
+
+#form-error,
+#submission-message{
+  margin-bottom: 2rem;
+}
+
+
+@media only screen and (min-width: 769px){
+
+form .notification{
+  /*margin-top: 2rem;*/
+}
+
 }
