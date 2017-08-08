@@ -32,6 +32,13 @@ function validateForm() {
   });
   if(valid) {
     submit();
+    if(!$("#form-error").hasClass("hidden")) {
+      $("#form-error").addClass("hidden");
+    }
+  } else {
+    if($("#form-error").hasClass("hidden")) {
+      $("#form-error").removeClass("hidden");
+    }
   }
 }
 

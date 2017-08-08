@@ -34,3 +34,7 @@ ul.collection-categories li.collection-categories a,
 ul.collection-category li.collection-category a{
   color: hsl(171, 100%, 41%);
 }
+
+.hidden {
+	display: none;
+}
