@@ -58,6 +58,7 @@ function submit() {
     aerostat_collection_id: collection.id,
     fields: []
   };
+  var checkboxSetText = [];
 
   payload.fields = collection.fields.map(function(collectionField) {
     $("input,select,textarea").each(function(i, field) {
@@ -67,16 +68,29 @@ function submit() {
           case "INPUT":
             if (
               (field.type === "radio" || field.type === "checkbox") &&
-              $("input[name='" + $(field)[0].name + "']:checked")[0]
+              $("input[name='" + field.name + "']:checked")[0]
             ) {
               if (field.type === "radio") {
                 collectionField.value = $(
-                  "input[name='" + $(field)[0].name + "']:checked"
+                  "input[name='" + field.name + "']:checked"
                 )[0].value;
-              } else {
+              }
+              if (field.name === "checkboxes_set") {
+                $("input[name='" + field.name + "']:checked").each(function(i, checked) {
+                  var value = checked.id.split('_').join(' ');
+                  if(!checkboxSetText.includes(value)) {
+                    checkboxSetText.push(value);
+                  }
+                });
+                collectionField.value = checkboxSetText.join(', ');
+              }
+              if (
+                field.type === "checkbox" &&
+                field.name !== "checkboxes_set"
+              ) {
                 collectionField.value = true;
               }
-            } else {
+            } else if (field.type === "text") {
               collectionField.value = field.value;
             }
             break;
