@@ -29,18 +29,20 @@ ul.tiny-stuffed-animal-zoo li.tiny-stuffed-animal-zoo a{
 
 ul.product-collection-index li.product-collection-index a,
 ul.product-collection-categories li.product-collection-categories a,
-ul.product-collection-category li.product-collection-category a{
+ul.product-collection-category li.product-collection-category a,
+ul.product-collection-show li.product-collection-show a{
   color: hsl(141, 71%, 48%);
 }
 
 ul.collection-index li.collection-index a,
 ul.collection-categories li.collection-categories a,
-ul.collection-category li.collection-category a{
+ul.collection-category li.collection-category a,
+ul.collection-show li.collection-show a{
   color: hsl(171, 100%, 41%);
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 form p{
@@ -54,6 +56,27 @@ form .field + .field{
 #form-error,
 #submission-message{
   margin-bottom: 2rem;
+}
+
+.column > .notification{
+
+}
+
+
+@media screen and (min-width: 769px){
+  .columns{
+    flex-wrap: wrap;
+  }
+
+  a.column{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  }
+
+  a.column .notification{
+    flex: 0 0 100%;
+  }
 }
 
 

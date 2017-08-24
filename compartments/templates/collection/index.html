@@ -8,6 +8,8 @@
         <a class="column is-one-third" href="{{slug}}">
           <div class="notification {{#if ../collection.has_products}}is-success{{else}}is-primary{{/if}}">
             <h3>{{permalink}}</h3>
+            <p>{{id}}</p>
+            <p>hello</p>
             <p>
               {{#each categories}}
                 {{this.permalink}} /
@@ -22,7 +24,10 @@
         </a>
       {{/each}}
     </div>
-    <div class="notification is-light">
+    <a class="button {{#if collection.has_products}}is-success{{else}}is-primary{{/if}}" href="{{params.fetch_prev}}">Previous Page</a>
+    <a class="button {{#if collection.has_products}}is-success{{else}}is-primary{{/if}}" href="{{params.fetch_next}}">Next Page</a>
+
+    <div class="notification is-light" style="margin-top: 20px;">
       <p>To Do: Test multiple related collections &amp; product collections on a post, and no values set.</p>
     </div>
   </div>

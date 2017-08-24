@@ -22,6 +22,8 @@
         </a>
       {{/each}}
     </div>
+    <a class="button {{#if collection.has_products}}is-success{{else}}is-primary{{/if}}" href="{{params.fetch_prev}}">Previous Page</a>
+    <a class="button {{#if collection.has_products}}is-success{{else}}is-primary{{/if}}" href="{{params.fetch_next}}">Next Page</a>
     <!-- <div class="notification is-light">
       <p>To Do: Test multiple related collections &amp; product collections on a post, and no values set.</p>
     </div> -->
