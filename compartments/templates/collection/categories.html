@@ -5,8 +5,8 @@
     <p>Lists all categories in the &ldquo;{{title}}&rdquo; collection.</p>
     <div class="columns">
       {{#each categories}}
-        <a class="column is-one-third" href="categories/{{permalink}}">
-          <div class="notification {{#if ../has_products}}is-success{{else}}is-primary{{/if}}">
+        <a class="column is-one-third" href="/{{../collection.public_path}}/categories/{{permalink}}">
+          <div class="notification">
             <h3>{{title}}</h3>
           </div>
         </a>
