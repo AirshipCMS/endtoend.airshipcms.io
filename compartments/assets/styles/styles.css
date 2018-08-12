@@ -18,31 +18,38 @@ p{
   margin-bottom: 0.25rem;
 }
 
-.zoo-subnav{
+.subnav{
   margin: 1rem 0;
 }
 
-ul.tiny-empty-zoo li.tiny-empty-zoo a,
-ul.tiny-stuffed-animal-zoo li.tiny-stuffed-animal-zoo a{
+ul{
+  word-break: break-all;
+}
+
+ul.example-page li.example-page a,
+ul.example-page-2 li.example-page-2 a{
   color: hsl(48, 100%, 67%);
 }
 
 ul.product-collection-index li.product-collection-index a,
 ul.product-collection-categories li.product-collection-categories a,
 ul.product-collection-category li.product-collection-category a,
-ul.product-collection-show li.product-collection-show a{
+ul.product-collection-show li.product-collection-show a,
+.product-collection-link{
   color: hsl(141, 71%, 48%);
 }
 
 ul.collection-index li.collection-index a,
 ul.collection-categories li.collection-categories a,
 ul.collection-category li.collection-category a,
-ul.collection-show li.collection-show a{
+ul.collection-show li.collection-show a,
+.collection-link{
   color: hsl(171, 100%, 41%);
 }
 
+
 .hidden {
-  display: none;
+	display: none;
 }
 
 form p{
@@ -62,7 +69,6 @@ form .field + .field{
 
 }
 
-
 @media screen and (min-width: 769px){
   .columns{
     flex-wrap: wrap;
@@ -74,16 +80,64 @@ form .field + .field{
     align-items: stretch;
   }
 
+  a.column:hover > .notification{
+    opacity: 0.9;
+  }
+
   a.column .notification{
     flex: 0 0 100%;
   }
 }
 
-
 @media only screen and (min-width: 769px){
-
-form .notification{
-  /*margin-top: 2rem;*/
+  form .notification{
+    /*margin-top: 2rem;*/
+  }
 }
 
+/* Sign In */
+
+.signin-container{
+  text-align: center;
+}
+
+.signin-container h1{
+  font-size: 1.5em;
+  /*margin-bottom: 0.5em;*/
+}
+
+.signin-container h3{
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: #AAA;
+}
+
+.signin-container h1 + p{
+  margin-top: 1em;
+}
+
+.signin-container h3 + p{
+  color: #AAA;
+}
+
+.signin-container h3 + p a{
+  color: #AAA;
+  border-bottom: 1px dashed #CCC;
+  padding-bottom: 1px;
+}
+
+.signin-container p{
+  margin: 0 auto 0;
+  max-width: 300px;
+}
+
+.signin-container p.small{
+  font-size: 0.8em;
+}
+
+.signin-container button.button,
+.signin-container a.button{
+  display: inline-block;
+  margin: 1em auto 1em;
+  min-width: 150px;
 }

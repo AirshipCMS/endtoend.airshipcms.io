@@ -1,0 +1,88 @@
+/*--------------------------------------------------
+
+BULMA STYLES FOR AIRSHIP NAV ITEMS:
+
+These styles match Airship nav components to styles 
+used in the Bulma CSS framework. These styles are 
+not critical to nav functionality.
+
+---------------------------------------------------*/
+
+.navbar-item.navbar-custom{
+  line-height: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.airship-nav-cart-counter,
+.airship-nav-login-status{
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px){
+  .airship-nav-login-status,
+  .airship-nav-cart-counter{
+    display: flex;
+  }
+}
+
+.airship-nav-cart-counter-count,
+.airship-nav-login-status-username,
+.airship-nav-login-status-signin,
+.airship-nav-login-status-logout{
+  display: block;
+  line-height: 1.5;
+  padding: .5rem 1rem;
+  background-color: #FFFFFF;
+  color: #4A4A4A;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px){
+  .airship-nav-cart-counter-count,
+  .airship-nav-login-status-username,
+  .airship-nav-login-status-signin,
+  .airship-nav-login-status-logout{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.airship-nav-cart-counter-count:hover,
+.airship-nav-login-status-username:hover,
+.airship-nav-login-status-signin:hover,
+.airship-nav-login-status-logout:hover{
+  background-color: #F5F5F5;
+  color: #3273DC;
+}
+
+@media only screen and (min-width: 1024px){
+  .airship-nav-login-status-logged-in{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 1024px){
+  .airship-nav-cart-counter-notification,
+  .airship-nav-login-status-dropdown{
+    top: 52px;
+  }
+}
+
+.airship-nav-cart-counter-notification-text{
+  padding: 0.5rem;
+  background-color: #4A4A4A;
+  color: #F5F5F5;
+  font-size: 13px;
+  line-height: 16px;
+}
