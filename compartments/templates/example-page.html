@@ -2,12 +2,15 @@
 
 <section class="section">
   <div class="container">
+    <h1>{{fields.header}}</h1>
     <p class="has-text-grey-light is-size-7">{{fields.description}}</p>
   </div>
 </section>
+
 <hr>
+
 <section class="section">
-    <div class="container">
+  <div class="container">
     <p>List this page's related_items for field named <b>Related Collection</b>. Items are pulled from <b>Example Collection</b>.</p>
     <div class="columns">
       {{#each related_items.related_collection}}

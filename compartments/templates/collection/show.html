@@ -1,5 +1,22 @@
 {{> subnav}}
 
+<section class="section">
+  <div class="container">
+    <h1>{{fields.header}}</h1>
+    <p class="has-text-grey-light is-size-7">{{fields.description}}</p>
+    <p class="has-text-grey-light is-size-7">
+      {{#each categories}}
+        {{this.permalink}} /
+      {{/each}}
+    </p>
+    <p class="has-text-grey-light is-size-7">
+      {{#each tags}}
+        {{this.name}} /
+      {{/each}}
+    </p>
+  </div>
+</section>
+
 <hr>
 
 <section class="section">
@@ -12,11 +29,50 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="is-size-4-mobile is-size-3-tablet">&ldquo;Related Stuffed Animals&rdquo; Products:</h2>
-    <p>Tests first related product collection on product.</p>
+    <p>List this page's related_items for field named <b>Related Collection</b>. Items are pulled from <b>Example Collection</b>.</p>
     <div class="columns">
-      {{#each related_items.stuffed_related}}
-        <a class="column is-one-third" href="{{slug}}">
+      {{#each related_items.related_collection}}
+        <a href="{{slug}}" class="column is-one-third">
+          <div class="notification is-primary">
+            <h3>{{permalink}}</h3>
+            <p>
+              {{#each categories}}
+                {{this.permalink}} /
+              {{/each}}
+            </p>
+            <p>
+              {{#each tags}}
+                {{this.name}}
+              {{/each}}
+            </p>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+    <p>List this page's related_items for field named <b>Related Collection 2</b>. Items are pulled from <b>Example Collection</b>.</p>
+    <div class="columns">
+      {{#each related_items.related_collection_2}}
+        <a href="{{slug}}" class="column is-one-third">
+          <div class="notification is-primary">
+            <h3>{{permalink}}</h3>
+            <p>
+              {{#each categories}}
+                {{this.permalink}} /
+              {{/each}}
+            </p>
+            <p>
+              {{#each tags}}
+                {{this.name}}
+              {{/each}}
+            </p>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+    <p>List this page's related_items for field named <b>Related Product Collection</b>. Items are pulled from <b>Example Product Collection</b>.</p>
+    <div class="columns">
+      {{#each related_items.related_product_collection}}
+        <a href="{{slug}}" class="column is-one-third">
           <div class="notification is-success">
             <h3>{{permalink}}</h3>
             <p>
@@ -33,45 +89,40 @@
         </a>
       {{/each}}
     </div>
-    <p>Tests second related product collection on a product.</p>
+    <p>List this page's related_items for field named <b>Related Product Collection 2</b>. Items are pulled from <b>Example Product Collection</b>.</p>
     <div class="columns">
-      {{#each related_items.second_stuffed_related}}
-        <a class="column is-one-third" href="{{slug}}">
+      {{#each related_items.related_product_collection_2}}
+        <a href="{{slug}}" class="column is-one-third">
           <div class="notification is-success">
             <h3>{{permalink}}</h3>
+            <p>
+              {{#each categories}}
+                {{this.permalink}} /
+              {{/each}}
+            </p>
+            <p>
+              {{#each tags}}
+                {{this.name}}
+              {{/each}}
+            </p>
           </div>
         </a>
       {{/each}}
     </div>
+  </div>
+</section>
 
-    <h2 class="is-size-4-mobile is-size-3-tablet">&ldquo;Related Unstuffed Animals&rdquo; Posts:</h2>
-    <p>Tests first related collection on a product.</p>
-    <div class="columns">
-      {{#each related_items.unstuffed_related}}
-        <a class="column is-one-third" href="{{slug}}">
-          <div class="notification is-primary">
-            <h3>{{permalink}}</h3>
-          </div>
-        </a>
-      {{/each}}
-    </div>
-    <p>Tests second related collection on a product.</p>
-    <div class="columns">
-      {{#each related_items.second_unstuffed_related}}
-        <a class="column is-one-third" href="{{slug}}">
-          <div class="notification is-primary">
-            <h3>{{permalink}}</h3>
-          </div>
-        </a>
-      {{/each}}
-    </div>
-    <!-- {{#if aerostat_collection.has_products}}
-    {{else}}
-      <div class="notification is-danger">
-        <p>Rendering Error: No Related Items show on this Collection Post</p>
-      </div>
-    {{/if}} -->
 
+<!-- {{#if aerostat_collection.has_products}}
+{{else}}
+  <div class="notification is-danger">
+    <p>Rendering Error: No Related Items show on this Collection Post</p>
+  </div>
+{{/if}} -->
+
+<!-- TESTS RENDERING SUBSCRIPTIONS, reformat and also add to page.-->
+<!-- <section>
+  <div class="container">
     <h2 class="is-size-4-mobile is-size-3-tablet">&ldquo;Related Subscriptions&rdquo; Posts:</h2>
     <div class="columns">
       {{#each related_items.related_subscriptions}}
@@ -100,9 +151,10 @@
       {{/each}}
     </div>
   </div>
-</section>
+</section> -->
 
-<section>
+<!-- TESTS RENDERING SITE NAME, probably can delete.-->
+<!-- <section>
   <div class="container">
     <div class="columns">
       <div class="column">
@@ -114,22 +166,9 @@
       </div>
     </div>
   </div>
-</section>
-
-<!-- <section>
-  <div class="container">
-    <div class="columns">
-      <div class="column">
-        <div class="notification" style="margin-top:2rem">
-          <div class="new-properties">
-            {{{help}}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section> -->
 
+<!-- HELP -->
 <!-- <div class="airship-help-block section">
   <div class="container">
     <div class="notification is-light">
@@ -146,5 +185,5 @@
 
 <!-- content for title-block in layout -->
 {{#content_for 'title-block' }}
-  &ldquo;{{permalink}}&rdquo;
+  {{fields.header}}
 {{/content_for}}
