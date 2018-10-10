@@ -184,3 +184,40 @@ Add pagination to list pages so that 2 items show per page. Fix template to be 2
 
 Future: rendering items accross different collections (and maybe pages?) that use the same tags?
 ```
+
+
+------------------------- fixy notes ------
+
+setup
+set up all pages, except relateds
+set up categories
+set up all collections, except relateds, save
+
+content
+set up all pages, except relateds
+set up all posts, except relateds
+- edit: D cannot be null for header
+set up all products, except relates
+- products dont have header and description, they have product title abd product description
+- products need example data. use 1.50 /1.00
+- set A to regular, AA to sale, same for B, C and D
+- inventory 10, 20, 0, Small Medium Large
+- for relates set all posts ABCD, or AABBCCDD, d should not render?
+set up relateds for pages and collections
+set up relateds for posts
+set up pages content
+set up blank
+  - cart.html
+  - checkout.html
+  - signin.html
+
+setting a product to future shows it as active in admin list instead of scheduled
+  - Scheduled and On Sale / On Sale
+  - Inactive and On Sale / Inactive 
+cannot do underscores in tags
+maybe template dir/template setter should be more intuitive
+maybe items are published by default
+example page
+- include D in related pages set
+- was using 'layout.html' instead of 'application.html'. change default layout to application.html.
+harcode site name in partial layout
