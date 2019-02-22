@@ -1,9 +1,15 @@
 # End to End Site
 
-Notes: after testing thoroughly on alpha e2e
-- clean out templates that aren't needed
-- stash / rename / prep subscription-specific templates
-- put good changes on prod e2e
+On Prod before doing prod--> alpha snapshot, make sure pages, collections, and product collections are good to go.
+
+Notes:
+On e2e alpha,
+- KEEP signin, cart, nav, and checkout modules from ALPHA
+- GET other layouts, templates, styles from PROD E2E REPO
+- CLEAN out templates that aren't needed
+- LAUNCH to alpha
+- TEST
+- Put good changes on prod e2e (prep for next weekend launch)
 
 ## Example Page
 
