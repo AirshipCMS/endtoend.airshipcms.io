@@ -1,5 +1,10 @@
 # End to End Site
 
+Notes: after testing thoroughly on alpha e2e
+- clean out templates that aren't needed
+- stash / rename / prep subscription-specific templates
+- put good changes on prod e2e
+
 ## Example Page
 
 |Item|Title/Name|Type|Value|Expectation|
