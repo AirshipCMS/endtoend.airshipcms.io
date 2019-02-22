@@ -54,6 +54,8 @@ Template Directory|||`collection`|
 |Field|Related Subscription Collection 2|Related to `Example Subscription Collection`|_See specific items._|_See specific items._|
 |Primary Label|||`Header`|
 
+Notes: Layout is 'layout.html?' or 'application.html' Currently works with layout.html.
+
 ### Categories Setup
 |Category Name|Permalink|Expectation|
 |--|--|--|
@@ -75,6 +77,8 @@ Template Directory|||`collection`|
 |Related Product Collection 2|Set Related Items: `AA`, `BB`, `CC`|Only `AA` renders. Setting a separate set of items to test that the proper relateds render in this set, even though it pulls from the same collection.|
 |Related Subscription Collection|Set Related Items: `A`, `B`, `C`|Only `A` renders|
 |Related Subscription Collection 2|Set Related Items: `AA`, `BB`, `CC`|Only `AA` renders. Setting a separate set of items to test that the proper relateds render in this set, even though it pulls from the same collection.|
+
+Note: Tag "Tag_A" is not possible. Did "Tag+A"
 
 ### Item: `B Drafted Item`
 This item has the same values except for the following:
