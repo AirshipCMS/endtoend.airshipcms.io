@@ -65,13 +65,16 @@ Template Directory|||`collection`|
 |Field|Related Subscription Collection 2|Related to `Example Subscription Collection`|_See specific items._|_See specific items._|
 |Primary Label|||`Header`|
 
-Notes: Layout is 'layout.html?' or 'application.html' Currently works with layout.html.
+Notes: Add Layout is 'layout.html'.
 
 ### Categories Setup
 |Category Name|Permalink|Expectation|
 |--|--|--|
 |Cat 1|`cat1`|Items `A`, `B`, `C`, `AA`, `BB`, `CC`, `AAA`, `BBB`, and `CCC` have `Cat 1` set.|Items `A`, `AA`, and `AAA` render in the list view.|
 |Cat 2|`cat2`|No items have `Cat 2` set. No items render in the list view for `Cat 2`.|
+
+Notes: Add Just initial values and no relateds. 
+After adding all collection items, product colletion items, and sub collection items **this should be the only manual part if working from prod snapshot*, then go back and connect all relateds.
 
 ### Item: `A Published Item`
 |Field|Value|Expectation|
@@ -120,6 +123,8 @@ This item is published and has no other values set.
 |Publish Date|Any Past Date|This item should render, with no content on the view. This tests that missing content is handled gracefully.|
 |Permalink|`d`|
 
+Notes: Admin requires a Header, since it is set as the primary label. Cannot set to no value.
+
 ### Item: `AA Published Item`
 This item has the same values as `A Published Item`, except for the following:
 
@@ -127,6 +132,8 @@ This item has the same values as `A Published Item`, except for the following:
 |--|--|--|
 |Header|`AA Published Item`|
 |Permalink|`aa`|
+
+Notes: and description is different.
 
 ### Item: `BB Drafted Item`
 This item has the same values as `B Drafted Item`, except for the following:
@@ -136,13 +143,17 @@ This item has the same values as `B Drafted Item`, except for the following:
 |Header|`BB Published Item`|
 |Permalink|`bb`|
 
-### Item: `CC Drafted Item`
-This item has the same values as `CC Future Date Item`, except for the following:
+Notes: and description is different.
+
+### Item: `CC Future Date Item`
+This item has the same values as `C Future Date Item`, except for the following:
 
 |Field|Value|
 |--|--|--|
 |Header|`CC Future Date Item`|
 |Permalink|`cc`|
+
+Notes: and description is different.
 
 ### Item: "DD No Content Item"
 This item has the same values as "D No Content Item", except for the following:
@@ -150,6 +161,8 @@ This item has the same values as "D No Content Item", except for the following:
 |Field|Value|
 |--|--|--|
 |Permalink|`dd`|
+
+Notes: and description is different.
 
 ### Item: `AAA Published Item`
 This item has the same values as `A Published Item`, except for the following:
@@ -160,6 +173,8 @@ This item has the same values as `A Published Item`, except for the following:
 |Permalink|`aaa`|
 |Tags|`Tag 2`,`Tag+`,`Tag-B`,`Tag_B`,`'Tag with Single Quotes'`,`"Tag with Double Quotes"`|Tests tags that are different from other published posts.|
 
+Notes: and description is different.
+
 ### Item: `BBB Drafted Item`
 This item has the same values as `B Drafted Item`, except for the following:
 
@@ -168,7 +183,9 @@ This item has the same values as `B Drafted Item`, except for the following:
 |Header|`BBB Published Item`|
 |Permalink|`bbb`|
 
-### Item: `CCC Drafted Item`
+Notes: and description is different.
+
+### Item: `CCC Future Date Item`
 This item has the same values as `CC Future Date Item`, except for the following:
 
 |Field|Value|
@@ -176,12 +193,16 @@ This item has the same values as `CC Future Date Item`, except for the following
 |Header|`CCC Future Date Item`|
 |Permalink|`ccc`|
 
+Notes: and description is different.
+
 ### Item: "DDD No Content Item"
 This item has the same values as "D No Content Item", except for the following:
 
 |Field|Value|
 |--|--|--|
 |Permalink|`ddd`|
+
+Notes: and description is different.
 
 ```
 For each collection use the same naming conventions, switching out 'Item', 'Product', or 'Subscription Product'
@@ -199,6 +220,8 @@ Add pagination to list pages so that 2 items show per page. Fix template to be 2
 
 Future: rendering items accross different collections (and maybe pages?) that use the same tags?
 ```
+
+
 
 
 ------------------------- fixy notes ------
@@ -236,3 +259,43 @@ example page
 - include D in related pages set
 - was using 'layout.html' instead of 'application.html'. change default layout to application.html.
 harcode site name in partial layout
+
+
+----
+
+More notes, add PRODUCT text to description for products.
+
+
+Change Description for all products. Simpler.
+
+A:
+This is item contains all related items: A-D, AA-DD, and AAA-DDD. Only A and D items should render.
+
+Regular / On Sale / Regular
+
+Weight:
+1oz / 1lb / 1lb 1oz
+
+B:
+This is item contains all related items: A-D, AA-DD, and AAA-DDD. Only A and D items should render.
+
+This page should not render in "each" lists, though going directly to the item slug should render.
+
+C:
+This is item contains all related items: A-D, AA-DD, and AAA-DDD. Only A and D items should render.
+
+This page should not render in "each" lists, though going directly to the item slug should render.
+
+ADMIN UX Improvement
+Add spinner after pressing create / save in admin.
+
+API Improvement
+Should future published items not render, if attached as a related item? Right now, they render.
+
+//////
+
+A,B,C - relateds for all
+
+D - no relateds
+
+AA,BB,CC,AAA,BBB,CCC - NO relateds
