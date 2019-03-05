@@ -299,3 +299,7 @@ A,B,C - relateds for all
 D - no relateds
 
 AA,BB,CC,AAA,BBB,CCC - NO relateds
+
+//////
+
+probably need spa routes? or rewrites for e2e cart/checkout
