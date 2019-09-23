@@ -221,7 +221,21 @@ Add pagination to list pages so that 2 items show per page. Fix template to be 2
 Future: rendering items accross different collections (and maybe pages?) that use the same tags?
 ```
 
-
+## Example Subscription Collection Setup
+|Item|Title/Name|Type|Value|Expectation|
+|--|--|--|--|--|
+|Title|||`Example Subscription Collection`|
+|Public Path|||`example-subscription-collection`|
+|Name|||`item`|
+|Layout|||`layout.html`|
+|Template Directory|||`collection`|
+|Items per page|||`2`|Only 2 items render per page. When a third item is expected, the next button must be pressed to see it.|
+|Has Categories|||`true`|
+|Has Tags|||`true`|
+|Show Permalink|||`true`|
+|Field|Header|Text|_See specific items._|_See specific items._|
+|Field|Description|Textarea|_See specific items._|_See specific items._|
+(for a full rendering test, also add all relateds)
 
 
 ------------------------- fixy notes ------
