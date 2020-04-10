@@ -15,16 +15,18 @@
 
           <div class="add-to-cart-button-container">
             <button
-              id="add-to-cart-button" 
-              class="button button-red button-add-to-cart add-to-cart add-to-cart-button add-sub-button"
-              data-product-title="{{product_title}}"
-              data-type="plan"
-              data-aerostat-id="{{id}}"
-              data-name="{{product_plan.name}}"
-              data-id="{{product_plan.id}}"
-              data-interval={{product_plan.stripe_data.interval}}
-              data-price="{{product_plan.stripe_data.amount}}"
-              data-has-no-shipments="{{fields.has_no_shipments}}"
+            id="add-to-cart-button" 
+            class="button button-red button-add-to-cart add-to-cart add-to-cart-button add-sub-button"
+            data-product-title="{{product_title}}"
+            data-type="plan"
+            data-aerostat-id="{{id}}"
+            data-name="{{product_plan.name}}"
+            data-id="{{product_plan.id}}"
+            data-interval={{product_plan.stripe_data.interval}}
+            data-interval-count={{product_plan.stripe_data.interval_count}}
+            data-price="{{product_plan.stripe_data.amount}}"
+            data-has-no-shipments="{{fields.has_no_shipments}}"
+            data-trial-days="{{product_plan.stripe_data.trial_period_days}}"
               >
               <span>Add to Cart</span>
             </button>
