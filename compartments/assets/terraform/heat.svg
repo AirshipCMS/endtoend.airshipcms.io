@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>heat</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="heat">
+            <rect id="Rectangle" fill="#CC4E07" x="0" y="0" width="18" height="18" rx="2"></rect>
+            <g id="Group-2" transform="translate(2.500000, 1.500000)" fill="#F7B500">
+                <polygon id="Fill-26" points="2.26289701 4.52970994e-14 -7.39408534e-14 6.27055031 2.02244104 9.14860849 1.97022406 14.7793396 3.96671777 8.37260613 2.11801101 5.33854167"></polygon>
+                <polygon id="Fill-27" points="6.70316156 4.52970994e-14 4.44026454 6.27055031 6.46270558 9.14860849 6.4104886 14.7793396 8.40714347 8.37260613 6.55827555 5.33854167"></polygon>
+                <polygon id="Fill-28" points="11.1435067 4.52970994e-14 8.88060967 6.27055031 10.9030507 9.14860849 10.8508337 14.7793396 12.8473274 8.37260613 10.9986207 5.33854167"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

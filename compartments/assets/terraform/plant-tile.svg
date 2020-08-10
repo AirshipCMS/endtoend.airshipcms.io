@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="27px" viewBox="0 0 23 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>plant-tile</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="plant-tile">
+            <polygon id="Fill-3" fill="#B9B9B9" points="4.61852778e-14 6.57892194 4.61852778e-14 19.7367658 11.3949958 26.3153481 22.7899916 19.7367658 22.7899916 6.57892194 11.3949958 6.75015599e-14"></polygon>
+            <polygon id="Fill-3" fill="#FFFFFF" points="1.68877729 7.55391547 1.68877729 18.761722 11.3949958 24.3653359 21.1012143 18.761722 21.1012143 7.55391547 11.3949958 1.95001223"></polygon>
+            <polygon id="Fill-3" fill="#8BC139" points="3.16767084 8.40773536 3.16767084 17.907858 11.3949958 22.6576741 19.6223207 17.907858 19.6223207 8.40773536 11.3949958 3.65767405"></polygon>
+        </g>
+    </g>
+</svg>
